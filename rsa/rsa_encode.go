@@ -9,7 +9,7 @@ import (
 	"fmt"
 )
 
-func (r *RSA) Encode(publicKeyStr, plaintext string) (encodedText string, err error) {
+func Encode(publicKeyStr, plaintext string) (encodedText string, err error) {
 	publicKeyBlock, _ := pem.Decode([]byte(publicKeyStr))
 	if publicKeyBlock == nil {
 		return "", fmt.Errorf("public key decode error")

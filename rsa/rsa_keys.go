@@ -8,7 +8,7 @@ import (
 	"fmt"
 )
 
-func (r *RSA) GenerateKey() (publicKey string, privateKey string, err error) {
+func GenerateKey() (publicKey string, privateKey string, err error) {
 	privateKeyObj, err := RSAlib.GenerateKey(rand.Reader, 2048)
 	if err != nil {
 		return "", "", err
